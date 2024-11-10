@@ -1,0 +1,39 @@
+input,
+textarea {
+    appearance: none;
+    width: 100%;
+
+    background-color: var(--input-base);
+    border: 1px solid var(--input-stroke);
+    border-radius: .5rem;
+
+    padding: .75rem 1rem;
+
+    color: var(--input-placeholder);
+}
+
+/* textarea {
+    resize: vertical;
+} */
+
+input[type="date"] {
+    &::-webkit-calendar-picker-indicator {
+        display: none;
+    }
+}
+
+label {
+    font: 400 .875rem var(--ff-sans);
+    color: var(--text-body);
+}
+
+input:focus,
+textarea:focus,
+.radio-wrapper:focus-within {
+    outline: 1px solid var(--brand-llight);
+}
+
+.input-wrapper > label {
+    display: block;
+    margin-bottom: .75rem;
+}

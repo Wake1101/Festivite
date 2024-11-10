@@ -1,0 +1,123 @@
+.radio-wrapper {
+    background-color: var(--input-base);
+    border: 1px solid var(--input-stroke);
+    border-radius: .5rem;
+
+    display: flex;
+    gap: .25rem;
+    align-items: center;
+
+    padding: .25rem;
+}
+
+.radio-inner {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    justify-content: center;
+
+    padding: .55rem 1rem;
+    border-radius: .25rem;
+    width: 130px;
+
+    position: relative;
+    & input {
+        all: unset;
+        position: absolute;
+
+        width: 100%;
+        height: 100%;
+        inset: 0;
+    }
+
+    &:focus-within,
+    &:hover {
+        background-color: var(--shape-button);
+        border-radius: .25rem;
+
+        & label {
+            font-weight: 600;
+        }
+
+        & svg path {
+            fill: var(--brand-light);
+        }
+    }
+}
+
+.personalization {
+    display: grid;
+    gap: 1.75rem;
+
+    & .input-wrapper > label {
+        display: block;
+        margin-bottom: 1rem;
+    }
+}
+
+
+.radio-wrapper-colors {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 2.5rem);
+    justify-content: space-between;
+}
+
+.radio-inner-colors {
+    background-color: var(--shape-button);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+
+    position: relative;
+
+    & img {
+        position: absolute;
+        inset: 0;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    & input {
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: none;
+        
+        &:focus {
+            outline: 2px solid var(--brand-light);
+        }
+    }
+}
+
+.radio-wrapper-theme {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8.375rem, 1fr));
+    gap: .5rem;
+}
+
+.radio-inner-theme {
+    background-color: var(--shape-button);
+    border: 1px solids var(--input-stroke);
+    border-radius: .5rem;
+
+    display: grid;
+    justify-content: center;
+    gap: .5rem;
+
+    text-align: center;
+
+    padding: .25rem .25rem .5rem .25rem;
+
+    position: relative;
+
+    & input {
+        position: absolute;
+        inset: 0;
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+    }
+}

@@ -1,0 +1,48 @@
+.file-zone {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+
+    position: relative;
+
+    height: 3rem;
+
+    & input[type="file"] {
+        opacity: 0;
+        position: absolute;
+        z-index: -999;
+    }
+
+    &:focus-within label {
+        outline: 1px solid var(--brand-light);
+    }
+
+    label {
+        font: 600 .875rem var(--ff-sans);
+        color: var(--text-heading);
+
+        background-color: var(--shape-button);
+        padding: .5rem .75rem;
+        border-radius: .5rem;
+
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    &:hover {
+        background-color: var(--brand-light);
+
+        & svg path {
+            fill: white;
+        }
+    }
+
+    & span {
+        color: var(--input-placeholder);
+        font: 400 1rem var(--ff-sans);
+    }
+}

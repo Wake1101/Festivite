@@ -3,6 +3,8 @@
     align-items: center;
     gap: .75rem;
 
+    height: 3rem;
+
     & input {
         position: absolute;
         left: -9999px;
@@ -14,6 +16,8 @@
         border-radius: 999px;
         width: 4rem;
         height: 2rem;
+
+        cursor: pointer;
 
         position: relative;
 
